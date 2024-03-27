@@ -1,4 +1,4 @@
-# YouTube Video to Detailed Notes Converter
+# SummarizeME
 
 This project aims to convert YouTube video into detailed notes using the Gemini AI model. It provides a streamlined interface for users to input a YouTube video URL, select the video's language, and generate comprehensive notes based on the video content.
 
