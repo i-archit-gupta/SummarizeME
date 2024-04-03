@@ -6,24 +6,6 @@ import base64
 from fpdf import FPDF
 from io import BytesIO
 
-# IGNORE THE COMMENETED CODE IN THE FILE
-
-# def text_to_pdf(download_text):
-#     pdf = FPDF()
-#     pdf.add_page()
-#     pdf.set_font("Arial", size=12)
-#     pdf.multi_cell(0, 10, download_text)
-#     pdf_bytes = pdf.output(dest='S').encode('latin1') 
-#     return pdf_bytes
-
-# def download_pdf(pdf_bytes, filename="summary.pdf"):
-#     st.download_button(
-#         label="Download PDF",
-#         data=pdf_bytes,
-#         file_name=filename,
-#         mime="application/pdf"
-#     )
-
 load_dotenv()  
 import os
 
@@ -101,7 +83,3 @@ if st.button("Get Detailed Notes"):
         st.markdown("## Export the notes:")
         download_text = "\n".join(summaries)
         st.markdown(get_binary_file_downloader_html(download_text, file_label="Download Text", file_name="summary.txt"), unsafe_allow_html=True)
-
-        # st.markdown(get_binary_file_downloader_html(download_text, file_label="Download PDF", file_name="summary.pdf"), unsafe_allow_html=True)
-        # pdf_bytes = text_to_pdf(download_text)
-        # download_pdf(pdf_bytes)
