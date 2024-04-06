@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 import google.generativeai as genai
 from youtube_transcript_api import YouTubeTranscriptApi
 import base64
-from fpdf import FPDF
 from io import BytesIO
 
 load_dotenv()  
@@ -53,7 +52,6 @@ youtube_link = st.text_input("Enter YouTube Video Link:")
 
 language = st.selectbox("Select Video Language:", ["en","hi"])
 
-
 if youtube_link:
     try:
         video_id = youtube_link.split("=")[1]
@@ -69,14 +67,14 @@ if st.button("Get Detailed Notes"):
         st.stop()
 
     if transcript_text:
-        st.markdown("## Original Transcript:")
+        st.markdown("## Original Transcript generated from Youtube API:")
         st.write(transcript_text)
 
         summary = generate_gemini_content(transcript_text, prompt)
         
         summaries = summary.split("\n")
         
-        st.markdown("## Detailed Notes:")
+        st.markdown("## Detailed Notes generated from GenAI:")
         for s in summaries:
             st.write(s)
 
