@@ -50,7 +50,7 @@ def get_binary_file_downloader_html(bin_file, file_label='File', file_name='file
 st.title("YouTube Transcript to Detailed Notes Converter")
 youtube_link = st.text_input("Enter YouTube Video Link:")
 
-language = st.selectbox("Select Video Language:", ["en","hi"])
+language = st.selectbox("Select Video Language:", ["en","hi","fr","de","es"])
 
 if youtube_link:
     try:
