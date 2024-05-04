@@ -10,7 +10,7 @@ import os
 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-prompt = """Generate comprehensive notes based on the content of the provided YouTube video URL. Summarize the video into structured notes including headings, subheadings, and key points. Ensure that all important topics and details are covered in the notes. The notes should be well-organized and easy to understand. If the video is in Hindi, please keep the notes in English Language."""
+prompt = """Generate comprehensive notes based on the content of the provided YouTube transcript. Summarize the video into structured notes including headings, subheadings, and key points. Ensure that all important topics and details are covered in the notes. The notes should be well-organized and easy to understand. Please keep the notes concise and to the point and in English Language no matter what language is the transcript is in."""
 
 def extract_transcript_details(youtube_video_url, language="en"):
     try:
