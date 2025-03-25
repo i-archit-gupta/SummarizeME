@@ -8,7 +8,7 @@ from io import BytesIO
 load_dotenv()  
 import os
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 
 # prompt = """Generate comprehensive notes based on the content of the provided YouTube transcript. Summarize the video into structured notes including headings, subheadings, and key points. Ensure that all important topics and details are covered in the notes. The notes should be well-organized and easy to understand. Please keep the notes concise and to the point and in English Language no matter what language is the transcript is in."""
 prompt = """Your task is to summarize the content into concise and to-the-point notes in English of given a transcript from a YouTube video. Make sure to make the notes in English Language. The summary should include headings, subheadings, and key notes. Ensure the summary captures the main points of the video accurately and effectively."""
