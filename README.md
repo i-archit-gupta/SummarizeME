@@ -50,7 +50,3 @@ streamlit run main.py
 ## Contributing
 
 Contributions to this project are welcome! You can contribute by improving the UI, adding language support, optimizing code, or fixing bugs. Fork the repository, make your changes, and submit a pull request with a detailed description of your modifications.
-
-From MAIN branch
-
-FROM MY BRANCH
